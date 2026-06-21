@@ -99,6 +99,7 @@ img { max-width: 100%; }
   background: radial-gradient(circle, rgba(37,99,235,0.18) 0%, transparent 70%);
   bottom: -150px; right: -100px; animation: drift2 22s ease-in-out infinite;
 }
+@keyframes logo-float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)} }
 @keyframes drift1 { 0%,100%{transform:translate(0,0) scale(1)} 33%{transform:translate(120px,80px) scale(1.1)} 66%{transform:translate(-60px,120px) scale(0.95)} }
 @keyframes drift2 { 0%,100%{transform:translate(0,0) scale(1)} 33%{transform:translate(-80px,-60px) scale(1.08)} 66%{transform:translate(100px,-80px) scale(0.92)} }
 
@@ -118,7 +119,7 @@ img { max-width: 100%; }
 .badge-dot { width: 6px; height: 6px; border-radius: 50%; background: #A855F7; animation: pulse-dot 2s ease-in-out infinite; }
 @keyframes pulse-dot { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.5;transform:scale(0.7)} }
 
-.hero-logo { height: 160px; width: auto; object-fit: contain; margin-bottom: 1.75rem; mix-blend-mode: screen; filter: drop-shadow(0 0 32px rgba(168,85,247,0.6)) drop-shadow(0 0 60px rgba(37,99,235,0.3)); }
+.hero-logo { height: 280px; width: auto; max-width: 520px; object-fit: contain; margin-bottom: 1.75rem; mix-blend-mode: screen; filter: drop-shadow(0 0 40px rgba(168,85,247,0.8)) drop-shadow(0 0 80px rgba(37,99,235,0.5)) drop-shadow(0 0 120px rgba(168,85,247,0.3)); animation: logo-float 4s ease-in-out infinite; }
 
 .hero h1 {
   font-family: 'Playfair Display', serif;
@@ -366,7 +367,7 @@ footer {
   .nav-links { display: none; }
   .burger { display: block; }
   .hero { padding: 8rem 6% 6rem; }
-  .hero-logo { height: 120px; }
+  .hero-logo { height: 200px; max-width: 85vw; }
   .sec { padding: 4.5rem 5%; }
   .stats-strip-inner { grid-template-columns: 1fr 1fr; }
   .cta-wrap { margin: 0 3% 2rem; }
@@ -410,8 +411,8 @@ footer {
 <section class="hero">
   <canvas id="particles"></canvas>
   <div class="hero-inner">
-    <div class="hero-badge"><span class="badge-dot"></span>Entreprise Sociale &amp; Solidaire · 100 % gratuit</div>
     <img src="logo.png" alt="SANAD" class="hero-logo">
+    <div class="hero-badge"><span class="badge-dot"></span>Entreprise Sociale &amp; Solidaire · 100 % gratuit</div>
     <h1>
       L'écosystème numérique<br>
       qui <span class="grad">soutient chaque étudiant</span>
